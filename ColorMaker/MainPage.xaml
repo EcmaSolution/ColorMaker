@@ -8,4 +8,62 @@
         <Color x:Key="Other">#705c2e</Color>
     </ContentPage.Resources>
 
+    <Grid x:Name="Container" BackgroundColor="Black" >
+        <Frame Margin="10,0,10,0" VerticalOptions="Center" BackgroundColor="White">
+            <VerticalStackLayout>
+                <Label 
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    FontSize="Large" 
+                    Text="Color Maker" 
+                    HorizontalTextAlignment="Center"></Label>
+
+                <Label FontSize="Body" Text="Red Value:" TextColor="Black"></Label>
+                <Slider x:Name="SldRed" 
+                        MaximumTrackColor="{StaticResource Other}"
+                        MinimumTrackColor="{StaticResource Secondary}"
+                        ThumbColor="{StaticResource Primary}"
+                        ValueChanged="Sld_ValueChanged"></Slider>
+
+                <Label FontSize="Body" Text="Blue Value:" TextColor="Black"></Label>
+                <Slider x:Name="SldBlue" 
+                    MaximumTrackColor="{StaticResource Other}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Sld_ValueChanged"></Slider>
+
+                <Label FontSize="Body" Text="Green Value:" TextColor="Black"></Label>
+                <Slider x:Name="SldGreen" 
+                    MaximumTrackColor="{StaticResource Other}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Sld_ValueChanged"></Slider>
+
+                <Frame CornerRadius="25" HorizontalOptions="Center"
+                        BackgroundColor="White">
+                    <HorizontalStackLayout>
+                        <Label x:Name="LblHex" 
+                               Text="Hex Value: #000"
+                               TextColor="Black"
+                               VerticalOptions="Center"></Label>
+
+                        <ImageButton Margin="10,0,0,0" 
+                                     HeightRequest="25"
+                                     WidthRequest="25"
+                                     Source="clipboard.png"
+                                     Clicked="ImageButton_Clicked"></ImageButton>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Button x:Name="BtnRandom"
+                        Margin="0,20,0,0"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        Text="Generate Random Color"
+                        Clicked="ImageButton_Clicked"></Button>
+
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+
 </ContentPage>
