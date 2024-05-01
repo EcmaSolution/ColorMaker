@@ -51,7 +51,7 @@
                                      HeightRequest="25"
                                      WidthRequest="25"
                                      Source="clipboard.png"
-                                     Clicked="ImageButton_Clicked"></ImageButton>
+                                     Clicked="CopyToClipboard"></ImageButton>
                     </HorizontalStackLayout>
                 </Frame>
 
@@ -60,7 +60,7 @@
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         Text="Generate Random Color"
-                        Clicked="ImageButton_Clicked"></Button>
+                        Clicked="GenerateRandomColor"></Button>
 
             </VerticalStackLayout>
         </Frame>
